@@ -1,0 +1,25 @@
+.catalog {
+  position: relative;
+}
+
+.catalog__wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.catalog__title {
+  margin-bottom: 160px;
+}
+
+.catalog__item {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 150px;
+}
+
+.catalog__sort {
+  position: absolute;
+  top: 20px;
+  left: 300px;
+}

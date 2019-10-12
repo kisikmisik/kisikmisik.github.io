@@ -1,0 +1,22 @@
+.count {
+  display: flex;
+  height: 50px;
+  align-items: stretch;
+}
+
+.count__value {
+  width: 30px;
+  text-align: center;
+}
+
+.count__control {
+  background-color: #68b738;
+  color: white;
+  border: 0;
+  flex-grow: 1;
+}
+
+.count__control-wrapper {
+  display: flex;
+  flex-direction: column;
+}

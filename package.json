@@ -1,0 +1,24 @@
+{
+  "name": "macopedia",
+  "version": "1.0.0",
+  "description": "Task for Macopedia",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kisikmisik/kisikmisik.github.io.git"
+  },
+  "author": "Volodymyr Nofenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kisikmisik/kisikmisik.github.io/issues"
+  },
+  "homepage": "https://github.com/kisikmisik/kisikmisik.github.io#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2"
+  }
+}
