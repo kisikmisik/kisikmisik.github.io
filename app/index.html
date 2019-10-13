@@ -15,21 +15,8 @@
 			<h2 class="cart__title main-title">Cart</h2>
       <button class="cart__show button" type="button">Show cart</button>
 
-      <div class="cart__added-wrapper visually-hidden">
-
-        <div class="cart__added">
-          <img class="cart__added-picture" src="img/blaster.png" width="100">
-          <h3 class="cart__added-title">Dodany towar 1</h3>
-          <fieldest class="cart__added-count count">
-            <input type="text" class="count__value" value="1" name="count">
-            <div class="count__control-wrapper">
-              <button class="count__control count__control--bigger">+</button>
-              <button class="count__control count__control--smaller">-</button>
-            </div>
-          </fieldest>
-          <p class="cart__added-price">Price</p>
-        </div>
-
+      <div class="cart__wrapper visually-hidden">
+        <p class="cart__none">Your cart is empty</p>
       </div>
 
 		</section>
@@ -123,6 +110,24 @@
 			</div>
 		</section>
 	</main>
+
+  <template id="cart-template">
+    <div class="cart__added">
+      <img class="cart__added-picture" src="img/blaster.png" width="100">
+      <h3 class="cart__added-title">Dodany towar 1</h3>
+      <fieldest class="cart__added-count count">
+        <div class="count__control-wrapper">
+          <input class="count__value" type="text" name="count" value="1">
+          <button class="count__control count__control--bigger">+</button>
+          <button class="count__control count__control--smaller">-</button>
+        </div>
+      </fieldest>
+      <p class="cart__added-price">Price</p>
+    </div>
+  </template>
+
   <script src="js/main.js"></script>
+  <script src="js/cart.js"></script>
+
 </body>
 </html>

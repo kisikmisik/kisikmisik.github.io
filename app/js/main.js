@@ -1,16 +1,16 @@
 var cartShow = document.querySelector('.cart__show');
-var cartAdded = document.querySelector('.cart__added-wrapper');
-
+var cartAddedAll = document.querySelector('.cart__wrapper');
+var cartNone = document.querySelector('.cart__none');
 var sortShow = document.querySelector('.sort-items');
 var sortBy = document.querySelector('.sort-items__type');
 var sortArrow = document.querySelector('.sort-items__arrow');
 
 cartShow.addEventListener('click', function (evt) {
-  if (cartAdded.classList.contains('visually-hidden')) {
-    cartAdded.classList.remove('visually-hidden');
+  if (cartAddedAll.classList.contains('visually-hidden')) {
+    cartAddedAll.classList.remove('visually-hidden');
     cartShow.textContent = 'Hide Cart';
   } else {
-    cartAdded.classList.add('visually-hidden');
+    cartAddedAll.classList.add('visually-hidden');
     cartShow.textContent = 'Show Cart';
   }
 });
@@ -26,3 +26,4 @@ sortShow.addEventListener('click', function (evt) {
     sortArrow.style.top = '5px';
   }
 });
+

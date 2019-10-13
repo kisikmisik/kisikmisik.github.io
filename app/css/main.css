@@ -359,13 +359,16 @@ img {
   border: 0;
   height: 40px;
   width: 250px; }
+  .button:hover {
+    background-color: #4f872e; }
 
 .cart__added {
-  margin-top: 40px;
   display: flex;
   height: 150px;
   align-items: center;
-  font-size: 20px; }
+  font-size: 20px;
+  background-color: white;
+  z-index: 1; }
 
 .cart__added-picture {
   margin-right: 40px; }
@@ -376,6 +379,14 @@ img {
 
 .cart__added-count {
   margin-right: 40px; }
+
+.cart__none {
+  position: relative;
+  margin-top: 0;
+  top: 30px;
+  font-size: 25px;
+  z-index: -1;
+  color: grey; }
 
 .catalog {
   position: relative; }
@@ -412,6 +423,8 @@ img {
   color: white;
   border: 0;
   flex-grow: 1; }
+  .count__control:hover {
+    background-color: #4f872e; }
 
 .count__control-wrapper {
   display: flex;
