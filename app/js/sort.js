@@ -37,7 +37,6 @@ var getSortByName = function () {
     for (var j = 0; j < trueArray.length; j++) {
       if (itemNames[j].innerHTML === current) {
         itemNames[j].parentElement.style = 'order:' + currentIndex;
-
       }
     }
   }

@@ -29,3 +29,5 @@ sortShow.addEventListener('click', function (evt) {
   }
 });
 
+localStorage.clear();
+
