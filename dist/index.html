@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+  <meta charset="UTF-8">
+	<title>Macopedia task</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+  	<meta name="format-detection" content="telephone=no">
+  	<link rel="stylesheet" href="css/main.css">
+</head>
+<body class="wrapper">
+	<main class="page-main">
+		<h1 class="visually-hidden">Area 51 Assault shop - starter packs, tools</h1>
+
+		<section class="cart">
+			<h2 class="cart__title main-title">Cart</h2>
+      <button class="cart__show button" type="button">Show cart</button>
+
+      <div class="cart__wrapper visually-hidden">
+        <p class="cart__none">Your cart is empty</p>
+      </div>
+
+      <div class="cart__total visually-hidden"><span>Total:</span>
+        <input class="cart__total-value" value="0" disabled>
+      </div>
+
+		</section>
+
+		<section class="catalog">
+			<h2 class="catalog__title main-title">Catalog</h2>
+
+      <div class="catalog__sort sort-items">
+        <h3 class="sort-items__title">Sort by</h3>
+        <div class="sort-items__arrow"></div>
+        <div class="sort-items__type visually-hidden">
+          <button class="sort-items__price">Price</p>
+          <button class="sort-items__name">Name</p>
+        </div>
+      </div>
+
+			<div class="catalog__wrapper">
+
+				<article class="catalog__item item item--alien">
+          <h3 class="item__title">Alien suit</h3>
+          <a target="_blank" href="img/alien-suit.png">
+            <img src="img/alien-suit.png" alt="Alien suit" class="item__img" width="200">
+          </a>
+          <div class="item__wrapper">
+            <p class="item__price">100 $</p>
+            <button class="item__buy button" type="button">Add to cart</button>
+          </div>
+				</article>
+
+        <article class="catalog__item item item--naruto">
+          <h3 class="item__title">Naruto t-shirt</h3>
+          <a target="_blank" href="img/naruto.png">
+            <img src="img/naruto.png" alt="Naruto t-shirt picture" class="item__img" width="200">
+          </a>
+          <div class="item__wrapper">
+            <p class="item__price">50 $</p>
+            <button class="item__buy button" type="button">Add to cart</button>
+          </div>
+        </article>
+
+        <article class="catalog__item item item--energy">
+          <h3 class="item__title">Energy and Power source</h3>
+          <a target="_blank" href="img/energy.png">
+            <img src="img/energy.png" alt="Energy & Power drink picture" class="item__img" width="200">
+          </a>
+          <div class="item__wrapper">
+            <p class="item__price">30 $</p>
+            <button class="item__buy button" type="button">Add to cart</button>
+          </div>
+        </article>
+
+        <article class="catalog__item item item--slime">
+          <h3 class="item__title">Alien's slime</h3>
+          <a target="_blank" href="img/slime.png">
+            <img src="img/slime.png" alt="Alien's slime picture" class="item__img" width="200">
+          </a>
+          <div class="item__wrapper">
+            <p class="item__price">300 $</p>
+            <button class="item__buy button" type="button">Add to cart</button>
+          </div>
+        </article>
+
+        <article class="catalog__item item item--cap">
+          <h3 class="item__title">Sun protection cap</h3>
+          <a target="_blank" href="img/cap.png">
+            <img src="img/cap.png" alt="Sun protection cap picture" class="item__img" width="200">
+          </a>
+          <div class="item__wrapper">
+            <p class="item__price">150 $</p>
+            <button class="item__buy button" type="button">Add to cart</button>
+          </div>
+        </article>
+
+        <article class="catalog__item item item--blaster">
+          <h3 class="item__title">True Alien's blaster</h3>
+          <a target="_blank" href="img/blaster.png">
+            <img src="img/blaster.png" alt="True Alien's blaster" class="item__img" width="200">
+          </a>
+          <div class="item__wrapper">
+            <p class="item__price">500 $</p>
+            <button class="item__buy button" type="button">Add to cart</button>
+          </div>
+        </article>
+
+        <article class="catalog__item item item--scissors">
+          <h3 class="item__title">Scissors for metal</h3>
+          <a target="_blank" href="img/scissors.png">
+            <img src="img/scissors.png" alt="Scissors for metal picture" class="item__img" width="200">
+          </a>
+          <div class="item__wrapper">
+            <p class="item__price">90 $</p>
+            <button class="item__buy button" type="button">Add to cart</button>
+          </div>
+        </article>
+
+        <article class="catalog__item item item--drone">
+          <h3 class="item__title">Drone with artificial intelligence</h3>
+          <a target="_blank" href="img/drone.png">
+            <img src="img/drone.png" alt="Drone picture" class="item__img" width="200">
+          </a>
+          <div class="item__wrapper">
+            <p class="item__price">2000 $</p>
+            <button class="item__buy button" type="button">Add to cart</button>
+          </div>
+        </article>
+
+			</div>
+		</section>
+	</main>
+
+  <template id="cart-template">
+    <div class="cart__added">
+      <img class="cart__added-picture" src="img/blaster.png" width="100">
+      <h3 class="cart__added-title">Dodany towar 1</h3>
+      <fieldest class="cart__added-count count">
+        <div class="count__control-wrapper">
+          <input class="count__value" type="text" name="count" value="1" disabled>
+          <button class="count__control count__control--bigger">+</button>
+          <button class="count__control count__control--smaller">-</button>
+        </div>
+        <p class="cart__added-price">Price</p>
+      </fieldest>
+    </div>
+  </template>
+
+  <script src="js/main.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/sort.js"></script>
+
+</body>
+</html>
