@@ -26,3 +26,10 @@
   margin-bottom: 20px;
   color: #444444;
 }
+
+.item__buy--disabled {
+  background-color: grey;
+  &:hover {
+    display: none;
+  }
+}

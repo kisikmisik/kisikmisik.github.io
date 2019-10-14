@@ -15,7 +15,11 @@ var getBigger = function () {
   var count = this.parentElement.querySelector('.count__value');
   if (parseInt(count.value, 10) < 100) {
     count.value = parseInt(count.value, 10) + countStep;
-    }
+  }
+  var countWrapper = this.parentElement;
+  var priceNow = countWrapper.parentElement.querySelector('.cart__added-price').textContent;
+  var newTotalPrice = parseInt(priceNow) + parseInt(priceNow) / (count.value - 1) + '$';
+  countWrapper.parentElement.querySelector('.cart__added-price').textContent = newTotalPrice;
 };
 
 var getSmaller = function () {
@@ -23,7 +27,17 @@ var getSmaller = function () {
   if (parseInt(count.value, 10) > 0) {
     count.value = parseInt(count.value, 10) - countStep;
   }
+  if (parseInt(count.value, 10) < 1) {
+    var itemBuyDisabled = document.querySelector('.item__buy--disabled');
+    itemBuyDisabled.disabled = false;
+    itemBuyDisabled.classList.remove('item__buy--disabled');
+  }
 
+  var current = parseInt(count.value) + 1;
+  var countWrappe = this.parentElement;
+  var priceNo = countWrappe.parentElement.querySelector('.cart__added-price').textContent;
+  var newTotalPric = parseInt(priceNo) - parseInt(priceNo) / current + '$';
+  countWrappe.parentElement.querySelector('.cart__added-price').textContent = newTotalPric;
 };
 
 var getCancel = function () {
@@ -47,11 +61,21 @@ cartShow.addEventListener('click', function () {
   }
 });
 
-
+//pushing data from catalog to cart within tempate
 var getTemplate = function() {
   var template = document.querySelector('#cart-template').content.querySelector('.cart__added');
   var cartTemplate = template.cloneNode(true);
-  //тут вставить данные
+  var buttonWrap = this.parentElement;
+
+  var currentPicture = buttonWrap.parentElement.querySelector('.item__img').src;
+  cartTemplate.querySelector('.cart__added-picture').src = currentPicture;
+
+  var currentName = buttonWrap.parentElement.querySelector('.item__title').textContent;
+  cartTemplate.querySelector('.cart__added-title').textContent = currentName;
+
+  var currentPrice = buttonWrap.parentElement.querySelector('.item__price').textContent;
+  cartTemplate.querySelector('.cart__added-price').textContent = currentPrice;
+
   cartWrapper.appendChild(cartTemplate);
 
   if (cartAddedAll.querySelector('.cart__added')) {
@@ -67,11 +91,27 @@ var getTemplate = function() {
     countSmaller[i].onclick = getSmaller;
     cartAdded.onclick = getCancel;
   }
+  cartAddedAll.classList.remove('visually-hidden');
+  cartNone.classList.add('visually-hidden');
+  cartShow.textContent = 'Hide Cart';
 };
 
 for (var i = 0; i < catalogItem.length; i++) {
   catalogItemBuy[i].onclick = getTemplate;
+  catalogItemBuy[i].addEventListener('click', function () {
+    this.disabled = true;
+    this.classList.add('item__buy--disabled');
+  });
 };
+
+
+
+
+
+
+
+
+
 
 
 
