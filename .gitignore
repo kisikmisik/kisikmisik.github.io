@@ -7,6 +7,11 @@
 *.psd
 *.sublime*
 node_modules/
+app/
+package.json
+package-lock.json
+.editorconfig
+gulpfile.js
 npm-debug.*
 source/css/*.css
 source/css/*.map
