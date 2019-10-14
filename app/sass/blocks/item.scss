@@ -20,6 +20,10 @@
 .item__img {
   position: absolute;
   top: -90px;
+  left: 25px;
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 .item__price {

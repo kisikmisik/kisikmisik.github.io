@@ -8,9 +8,11 @@ var sortArrow = document.querySelector('.sort-items__arrow');
 cartShow.addEventListener('click', function (evt) {
   if (cartAddedAll.classList.contains('visually-hidden')) {
     cartAddedAll.classList.remove('visually-hidden');
+    cartTotal.classList.remove('visually-hidden');
     cartShow.textContent = 'Hide Cart';
   } else {
     cartAddedAll.classList.add('visually-hidden');
+    cartTotal.classList.add('visually-hidden');
     cartShow.textContent = 'Show Cart';
   }
 });

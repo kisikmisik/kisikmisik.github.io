@@ -8,6 +8,7 @@ var cartNone = document.querySelector('.cart__none');
 var catalogItem = document.querySelectorAll('.item');
 var cartWrapper = document.querySelector('.cart__wrapper');
 var catalogItemBuy = document.querySelectorAll('.item__buy');
+var cartTotal = document.querySelector('.cart__total');
 
 var countStep = 1;
 
@@ -34,10 +35,10 @@ var getSmaller = function () {
   }
 
   var current = parseInt(count.value) + 1;
-  var countWrappe = this.parentElement;
-  var priceNo = countWrappe.parentElement.querySelector('.cart__added-price').textContent;
-  var newTotalPric = parseInt(priceNo) - parseInt(priceNo) / current + '$';
-  countWrappe.parentElement.querySelector('.cart__added-price').textContent = newTotalPric;
+  var countWrapper = this.parentElement;
+  var priceNow = countWrapper.parentElement.querySelector('.cart__added-price').textContent;
+  var newTotalPrice = parseInt(priceNow) - parseInt(priceNow) / current + '$';
+  countWrapper.parentElement.querySelector('.cart__added-price').textContent = newTotalPrice;
 };
 
 var getCancel = function () {
@@ -50,6 +51,7 @@ var getCancel = function () {
 cartAddedAll.addEventListener('click', function () {
   if (!cartAddedAll.querySelector('.cart__added')) {
     cartAddedAll.classList.add('visually-hidden');
+    cartTotal.classList.add('visually-hidden');
     cartNone.classList.remove('visually-hidden');
     cartShow.textContent = 'Show Cart';
   }
@@ -69,10 +71,8 @@ var getTemplate = function() {
 
   var currentPicture = buttonWrap.parentElement.querySelector('.item__img').src;
   cartTemplate.querySelector('.cart__added-picture').src = currentPicture;
-
   var currentName = buttonWrap.parentElement.querySelector('.item__title').textContent;
   cartTemplate.querySelector('.cart__added-title').textContent = currentName;
-
   var currentPrice = buttonWrap.parentElement.querySelector('.item__price').textContent;
   cartTemplate.querySelector('.cart__added-price').textContent = currentPrice;
 
@@ -80,6 +80,7 @@ var getTemplate = function() {
 
   if (cartAddedAll.querySelector('.cart__added')) {
     cartNone.classList.add('visually-hidden');
+    cartTotal.classList.add('visually-hidden');
   }
 
   var countSmaller = cartTemplate.querySelectorAll('.count__control--smaller');
@@ -94,6 +95,7 @@ var getTemplate = function() {
   cartAddedAll.classList.remove('visually-hidden');
   cartNone.classList.add('visually-hidden');
   cartShow.textContent = 'Hide Cart';
+  cartTotal.classList.remove('visually-hidden');
 };
 
 for (var i = 0; i < catalogItem.length; i++) {
@@ -103,6 +105,11 @@ for (var i = 0; i < catalogItem.length; i++) {
     this.classList.add('item__buy--disabled');
   });
 };
+
+
+
+
+
 
 
 

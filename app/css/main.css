@@ -331,7 +331,7 @@ body {
   font-family: "oswald-regular", Arial, sens-serif;
   font-size: 14px;
   font-weight: normal;
-  min-width: 320px;
+  min-width: 1440px;
   padding: 0;
   margin: 0; }
 
@@ -339,9 +339,9 @@ body {
   body {
     min-width: 767px; } }
 
-@media (min-width: 1440px) {
+@media (min-width: 320px) {
   body {
-    min-width: 1440px; } }
+    min-width: 320px; } }
 
 a {
   text-decoration: none;
@@ -368,29 +368,46 @@ img {
   align-items: center;
   font-size: 20px;
   background-color: white;
-  z-index: 1; }
+  z-index: 1;
+  width: 70%;
+  margin-bottom: 50px; }
 
 .cart__added-picture {
-  margin-right: 40px; }
+  margin-right: 3%;
+  width: 15%; }
 
 .cart__added-title {
   font-weight: normal;
-  margin-right: 40px;
-  width: 160px; }
-
-.cart__added-count {
-  margin-right: 40px; }
+  width: 20%; }
 
 .cart__none {
-  position: relative;
   margin-top: 0;
-  top: 30px;
-  font-size: 25px;
-  z-index: -1;
+  font-size: 25px; }
+
+.cart__wrapper {
   color: grey; }
 
+.cart__show {
+  width: 20%;
+  margin-bottom: 40px; }
+
 .cart__added-price {
-  margin-left: 30px; }
+  margin-left: 40px; }
+
+.cart__total {
+  font-size: 20px; }
+
+.cart__total span {
+  border-bottom: 2px solid #68b738;
+  margin-right: 20px; }
+
+.cart__total-value {
+  border: none;
+  background-color: #f2f2f2;
+  height: 30px;
+  width: 90px;
+  text-align: center;
+  border-radius: 8%; }
 
 .catalog {
   position: relative; }
@@ -420,7 +437,10 @@ img {
 
 .count__value {
   width: 30px;
-  text-align: center; }
+  text-align: center;
+  height: 100%;
+  border: none;
+  background-color: #f2f2f2; }
 
 .count__control {
   background-color: #68b738;
@@ -432,7 +452,8 @@ img {
 
 .count__control-wrapper {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  flex-wrap: wrap; }
 
 .item {
   width: 250px;
@@ -453,7 +474,10 @@ img {
 
 .item__img {
   position: absolute;
-  top: -90px; }
+  top: -90px;
+  left: 25px; }
+  .item__img:hover {
+    opacity: 0.8; }
 
 .item__price {
   margin-bottom: 20px;
@@ -517,6 +541,12 @@ img {
 
 .wrapper {
   margin: 0 auto;
-  max-width: 1220px;
+  max-width: 1320px;
   position: relative;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  padding-left: 30px; }
+
+@media (max-width: 600px) {
+  .wrapper {
+    max-width: 500px;
+    padding-left: 30px; } }

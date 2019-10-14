@@ -33,7 +33,7 @@ body {
   font-family: "oswald-regular", Arial, sens-serif;;
   font-size: 14px;
   font-weight: normal;
-  min-width: 320px;
+  min-width: 1440px;
   padding: 0;
   margin: 0;
 }
@@ -44,9 +44,9 @@ body {
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 320px) {
   body {
-    min-width: 1440px;
+    min-width: 320px;
   }
 }
 
