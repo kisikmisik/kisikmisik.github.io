@@ -1,3 +1,4 @@
+(function () {
 var sortPrice = document.querySelector('.sort-items__price');
 var sortName = document.querySelector('.sort-items__name');
 var prices = document.querySelectorAll('.item__price');
@@ -40,15 +41,11 @@ var getSortByName = function () {
       }
     }
   }
-}
+};
 
-sortPrice.addEventListener('click', function () {
-  getSortByPrice();
-});
-
-sortName.addEventListener('click', function () {
-  getSortByName();
-});
+sortPrice.addEventListener('click', getSortByPrice);
+sortName.addEventListener('click', getSortByName);
+})();
 
 
 

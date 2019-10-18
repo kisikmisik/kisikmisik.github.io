@@ -1,14 +1,13 @@
+(function () {
+window.cartTotal = document.querySelector('.cart__total');
 var countValue = document.querySelectorAll('.count__value');
 var price = document.querySelectorAll('.cart__added-price');
 var cartAddedAll = document.querySelector('.cart__wrapper');
 var cartShow = document.querySelector('.cart__show');
 var cartNone = document.querySelector('.cart__none');
-
-
 var catalogItem = document.querySelectorAll('.item');
 var cartWrapper = document.querySelector('.cart__wrapper');
 var catalogItemBuy = document.querySelectorAll('.item__buy');
-var cartTotal = document.querySelector('.cart__total');
 var cartTotalInput = cartTotal.querySelector('.cart__total-value');
 
 var countStep = 1;
@@ -77,24 +76,19 @@ var getTemplate = function() {
   var countBigger = cartTemplate.querySelectorAll('.count__control--bigger');
   var cartAdded = cartTemplate;
 
-
-
   if (cartAddedAll.querySelector('.cart__added')) {
     cartNone.classList.add('visually-hidden');
     cartTotal.classList.add('visually-hidden');
-  }
+  };
 
   for (var i = 0; i < countBigger.length; i++) {
-    countBigger[i].onclick = getBigger;
-    countBigger[i].addEventListener('click', function () {
-      getTotalPrice();
-    });
-    countSmaller[i].onclick = getSmaller;
-    countSmaller[i].addEventListener('click', function () {
-      getTotalPrice();
-    });
-    cartAdded.onclick = getCancel;
-  }
+    countBigger[i].addEventListener('click', getBigger);
+    countBigger[i].addEventListener('click', getTotalPrice);
+    countSmaller[i].addEventListener('click', getSmaller);
+    countSmaller[i].addEventListener('click', getTotalPrice);
+    cartAdded.addEventListener('click', getCancel);
+  };
+
   cartAddedAll.classList.remove('visually-hidden');
   cartNone.classList.add('visually-hidden');
   cartShow.textContent = 'Hide Cart';
@@ -116,8 +110,6 @@ cartShow.addEventListener('click', function () {
   }
 });
 
-
-
 for (var i = 0; i < catalogItem.length; i++) {
   catalogItemBuy[i].onclick = getTemplate;
   catalogItemBuy[i].addEventListener('click', function () {
@@ -126,6 +118,7 @@ for (var i = 0; i < catalogItem.length; i++) {
     getTotalPrice();
   });
 };
+})();
 
 
 
